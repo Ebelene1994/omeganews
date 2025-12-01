@@ -65,3 +65,33 @@ Public users **NEVER** see admin links or dashboard UI.
 - Fully modular component architecture
 
 ## Project Structure Overview
+
+## Admin Authentication
+
+### Login Flow
+1. Admin navigates to `/admin/login`
+2. Enters email & password
+3. System verifies credentials using placeholder API
+4. On success:
+   - Authentication token stored in `sessionStorage`
+   - Admin redirected to `/admin`
+5. Unauthorized access to `/admin/*` → redirected to `/admin/login`
+
+## Setup and Installation
+
+```bash
+1. Clone the project
+git clone https://github.com/your-repo/OmegaNews.git
+cd OmegaNews
+
+2. Install dependencies
+npm install
+
+3. Run the development server
+npm run dev
+
+4. Build for production
+npm run build
+
+5. Preview production build
+npm run preview
